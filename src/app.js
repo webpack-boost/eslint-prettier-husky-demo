@@ -31,6 +31,7 @@ const uu = 1
 function loop(params) {
   Object.keys(params).forEach(k => {
     console.log(k)
+    xsasd
   })
 }
 loop(obj)
