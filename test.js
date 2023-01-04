@@ -11,6 +11,7 @@ function abc() {
   let y
   x1 = 1 + 2
   y = x1 + 2
+  a
   console.log(y)
 }
 abc()
