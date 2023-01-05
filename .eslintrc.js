@@ -7,12 +7,18 @@ module.exports = {
     amd: true
   },
   extends: ['airbnb-base', 'eslint:recommended', 'prettier'],
-  plugins: ['prettier'],
-  overrides: [],
+  plugins: ['prettier', 'json', 'html', 'markdown'],
+  overrides: [
+    {
+      // 2. Enable the Markdown processor for all .md files.
+      files: ['**/*.md'],
+      processor: 'markdown/markdown'
+    }
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    parser: '@typescript-eslint/parser'
+    parser: 'babel-eslint'
   },
   rules: {
     'prettier/prettier': 'error',
@@ -27,6 +33,7 @@ module.exports = {
         allowTemplateLiterals: true // 允许使用模板字符串
       }
     ],
-    'space-before-function-paren': 'off' // 函数与括号之间加上空格
+    'space-before-function-paren': ['off'], // 函数与括号之间加上空格
+    'no-plusplus': [2, { allowForLoopAfterthoughts: true }]
   }
 }
