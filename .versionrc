@@ -15,8 +15,8 @@
   ],
   "skip": {
     "bump": true, 
-    "changelog": false, //是否跳过生成changelog
-    "commit": true, //是否自动提交commit
-    "tag": true //是否自动打tag
+    "changelog": false,
+    "commit": true,
+    "tag": true
   }
 }

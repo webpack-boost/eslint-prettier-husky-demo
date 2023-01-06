@@ -4,4 +4,3 @@ function abc(x, y) {
   return x + y + a
 }
 abc()
-const x = 99

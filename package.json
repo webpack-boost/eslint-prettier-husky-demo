@@ -49,9 +49,9 @@
     "standard-version": "^9.5.0"
   },
   "lint-staged": {
-    "**/* .js": [
-      "eslint --fix",
-      "prettier --write"
+    "src/*.js": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "config": {
