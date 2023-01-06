@@ -48,7 +48,12 @@
     "prettier": "2.8.1",
     "standard-version": "^9.5.0"
   },
-  "lint-staged": {},
+  "lint-staged": {
+    "**/* .js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
