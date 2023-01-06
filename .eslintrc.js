@@ -6,12 +6,14 @@ module.exports = {
     commonjs: true,
     amd: true
   },
-  extends: [
-    'airbnb-base',
-    'eslint:recommended',
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier'
+  extends: ['airbnb-base', 'eslint:recommended', 'prettier'],
+  plugins: ['prettier', 'json', 'html', 'markdown'],
+  overrides: [
+    {
+      // 2. Enable the Markdown processor for all .md files.
+      files: ['**/*.md'],
+      processor: 'markdown/markdown'
+    }
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -27,6 +29,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'development' ? 'off' : 'error',
     'no-debugger': process.env.NODE_ENV === 'development' ? 'off' : 'error',
+    'no-var': 2,
+    'prefer-const': 0,
     semi: [2, 'never'],
     quotes: [
       2,
