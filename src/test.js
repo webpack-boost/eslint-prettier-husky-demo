@@ -1,6 +1,6 @@
 let a = 'just for test'
 a = `${a} + 1 + a`
 function abc(x, y) {
-  return x + y + a
+  return x + y + a + 2
 }
 abc()
